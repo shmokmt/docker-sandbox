@@ -6,5 +6,5 @@ WORKDIR /src
 RUN go build -o hello main.go
 
 FROM busybox
-COPY --from=build-env /work/hello /usr/local/bin/hello
+COPY --from=build-env /src/hello /usr/local/bin/hello
 ENTRYPOINT /usr/local/bin/hello
