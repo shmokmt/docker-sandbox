@@ -28,3 +28,4 @@ jobs:
         with:
           context: .
           cache-from: type=local,src=/tmp/.buildx-cache
+          cache-to: type=local,src=/tmp/.buildx-cache
