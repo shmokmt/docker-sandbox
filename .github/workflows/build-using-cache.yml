@@ -14,9 +14,9 @@ jobs:
         uses: actions/cache@v2
         with:
           path: /tmp/.buildx-cache
-          key: ${{ runner.os }}-buildx-${{ env.HEAD_SHA }}
+          key: v1-${{ runner.os }}-buildx-${{ env.HEAD_SHA }}
           restore-keys: |
-            ${{ runner.os }}-buildx-
+            v1-${{ runner.os }}-buildx-
 
       - name: Set up Docker Buildx
         id: buildx
