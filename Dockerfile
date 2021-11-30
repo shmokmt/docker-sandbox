@@ -1,5 +1,6 @@
 FROM golang:alpine AS build-env
-ADD . /work
+COPY go.mod /work
+COPY main.go /work
 WORKDIR /work
 RUN go build -o hello main.go
 
