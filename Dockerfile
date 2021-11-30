@@ -1,7 +1,8 @@
 FROM golang:alpine AS build-env
-COPY go.mod /work
-COPY main.go /work
-WORKDIR /work
+RUN mkdir /src
+COPY go.mod /src
+COPY main.go /src
+WORKDIR /src
 RUN go build -o hello main.go
 
 FROM busybox
